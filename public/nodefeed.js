@@ -14,10 +14,10 @@ var feedList = [
   'http://scriptogr.am/rafaelcastrocouto/feed'
 ];
 
-$feed.text('Loading...');
+$('<div>').addClass('article').text('Loading...').appendTo($feed);
 
 $.get('/json', 'feedList=' + JSON.stringify(feedList), function (json) {
-  $feed.text('');
+  $feed.empty()
   var data = JSON.parse(json); console.log(data);
   data.sort(function (a, b) {
     var aDate = new Date(a.published), bDate = new Date(b.published);

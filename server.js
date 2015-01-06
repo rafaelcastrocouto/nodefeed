@@ -13,8 +13,8 @@ app.get('/json', function (req, res) {
     listEnd = list.length,
     data = [];
   list.forEach(function (url) {
-    feedRead(url, function (err, articles) {
-      if (!err) {
+    feedRead(url, function (error, articles) {
+      if (!error) {
         listStart += 1;
         var articlesStart = 0, articlesEnd = articles.length;
         articles.forEach(function (article) {
@@ -25,11 +25,15 @@ app.get('/json', function (req, res) {
           }
         });
       } else {
+        console.log(error);
         res.send(JSON.stringify([{
-          content: 'Internal error' + err,
+          content: 'Error: ' + err,
           title: 'Error',
           published: new Date(),
-          author: 'nodefeed'
+          author: 'server.js',
+          feed: {
+            name: 'nodefeed'
+          }
         }]));
       }
     });
