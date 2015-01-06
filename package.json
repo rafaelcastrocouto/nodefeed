@@ -1,0 +1,26 @@
+{
+  "name": "nodefeed",
+  "version": "0.0.1",
+  "author": "rafaelcastrocouto",
+  "description": "DotaCard game",
+  "homepage": "http://nodefeed.herokuapp.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelcastrocouto/nodefeed"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bugs": {
+    "url": "https://github.com/rafaelcastrocouto/nodefeed/issues"
+  },
+  "keywords": ["feed", "read", "rss", "atom", "news"],
+  "dependencies": {
+    "express": "4.x",
+    "read-feed": "0.0.1"
+  },
+  "readmeFilename": "Readme.md",
+  "engine": "node >= 0.10.x",
+  "license": "GPL"
+}
