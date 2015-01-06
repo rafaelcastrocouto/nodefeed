@@ -18,7 +18,7 @@
   "keywords": ["feed", "read", "rss", "atom", "news"],
   "dependencies": {
     "express": "4.10.7",
-    "read-feed": "0.0.1"
+    "feed-read": "0.0.1"
   },
   "readmeFilename": "Readme.md",
   "engine": "node >= 0.10.x",
