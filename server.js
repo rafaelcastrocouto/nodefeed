@@ -3,10 +3,10 @@
 
 var express = require('express'),
   feedRead = require('feed-read'),
-  host = process.env.HOST || 'localhost',
   port = process.env.PORT || 5000,
   app = express();
-
+app.set('port', port);
+app.use(express['static'](__dirname + '/public'));
 app.get('/json', function (req, res) {
   var list = JSON.parse(req.param('feedList')),
     listStart = 0,
@@ -35,6 +35,7 @@ app.get('/json', function (req, res) {
     });
   });
 });
-app.use(express['static']('public'));
-app.listen(port, host);
+app.listen(app.get('port'), function() {
+  console.log("Node app is running:" + app.get('port'));
+});
 
