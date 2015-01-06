@@ -2,7 +2,7 @@
   "name": "nodefeed",
   "version": "0.0.1",
   "author": "rafaelcastrocouto",
-  "description": "DotaCard game",
+  "description": "A RSS/ATOM feed",
   "homepage": "http://nodefeed.herokuapp.com/",
   "repository": {
     "type": "git",

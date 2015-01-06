@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A RSS/ATOM feed",
   "repository": "https://github.com/rafaelcastrocouto/nodefeed",
-  "logo": "http://rafaelcastrocouto.github.io/nodefeed/public/RSS.png",
+  "logo": "http://rafaelcastrocouto.github.io/nodefeed/RSS.png",
   "keywords": ["feed", "read", "rss", "atom", "news"],
   "license": "GPL",
   "homepage": "http://nodefeed.herokuapp.com/",
