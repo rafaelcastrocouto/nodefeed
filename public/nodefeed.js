@@ -88,7 +88,7 @@ $edit.click(function () {
 
 $(function () {
   var saved = $.cookie('nodefeed');
-  if (saved.feedList) {
+  if (saved && saved.feedList && saved.feedList.length) {
     loadFeed(saved.feedList);
   } else {
     editFeed();

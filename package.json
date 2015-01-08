@@ -1,6 +1,6 @@
 {
   "name": "nodefeed",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "rafaelcastrocouto",
   "description": "A RSS/ATOM feed",
   "homepage": "http://nodefeed.herokuapp.com/",
