@@ -27,12 +27,14 @@ app.get('/json', function (req, res) {
       } else {
         console.log(error);
         res.send(JSON.stringify([{
-          content: 'Error: ' + err,
+          content: 'Description | ' + error,
           title: 'Error',
           published: new Date(),
           author: 'server.js',
+          link: 'https://github.com/rafaelcastrocouto/nodefeed/issues',
           feed: {
-            name: 'nodefeed'
+            name: 'nodefeed',
+            link: 'https://github.com/rafaelcastrocouto/nodefeed'
           }
         }]));
       }
