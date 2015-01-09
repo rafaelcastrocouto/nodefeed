@@ -1,6 +1,6 @@
 {
   "name": "nodefeed",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A RSS/ATOM feed",
   "repository": "https://github.com/rafaelcastrocouto/nodefeed",
   "logo": "http://rafaelcastrocouto.github.io/nodefeed/RSS.png",
