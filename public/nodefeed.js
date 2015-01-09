@@ -36,11 +36,11 @@ $(window).load(function () {
   };
 
   var sortFeed = function (json) {
+    var data = JSON.parse(json);
     feedmode = 'feed';
     location.hash = feedmode;
     $feed.empty();
     $edit.prop('disabled', false);
-    var data = JSON.parse(json);
     data.sort(function (a, b) {
       var aDate = new Date(a.published),
         bDate = new Date(b.published);
@@ -49,17 +49,18 @@ $(window).load(function () {
     data.forEach(addArticle);
   };
 
-  var loadFeed = function () {
-    var feedList;
+  var loadFeed = function (feedList) {
     feedmode = 'loading';
     location.hash = feedmode;
     $feed.empty();
     $edit.text('Edit').prop('disabled', true);
     $('<div>').addClass('article').text('Loading...').appendTo($feed);
-    if (isSaved) {
-      feedList = saved.feedList;
-    } else {
-      feedList = defaultList;
+    if (!feedList) {
+      if (isSaved) {
+        feedList = saved.feedList;
+      } else {
+        feedList = defaultList;
+      }
     }
     $.get('/json', 'feedList=' + JSON.stringify(feedList), sortFeed);
     $.cookie('nodefeed', {feedList: feedList}, {expires: 365});
@@ -70,8 +71,12 @@ $(window).load(function () {
   };
 
   var addItem = function (url) {
-    if (typeof url !== 'string') { url = $('.editfeed input').val(); }
-    var item = $('<div>').addClass('item').appendTo($('.editfeed'));
+    var input, item = $('<div>').addClass('item').appendTo($('.editfeed'));
+    if (typeof url !== 'string') {
+      input = $('.editfeed input');
+      url = input.val();
+      input.val('');
+    }
     $('<span>').text(url).appendTo(item);
     $('<button>').text('✗').attr('title', 'Delete').appendTo(item).click(delItem);
   };
