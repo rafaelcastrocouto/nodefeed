@@ -1,9 +1,9 @@
 {
   "name": "nodefeed",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A RSS/ATOM feed",
   "repository": "https://github.com/rafaelcastrocouto/nodefeed",
-  "logo": "http://rafaelcastrocouto.github.io/nodefeed/RSS.png",
+  "logo": "http://nodefeed.herokuapp.com/RSS.png",
   "keywords": ["feed", "read", "rss", "atom", "news"],
   "license": "GPL",
   "homepage": "http://nodefeed.herokuapp.com/",
@@ -12,6 +12,7 @@
     "url": "https://github.com/rafaelcastrocouto/nodefeed"
   },
   "readmeFilename": "Readme.md",
+  "engine": "node >= 0.10.x",
   "bugs": {
     "url": "https://github.com/rafaelcastrocouto/nodefeed/issues"
   }

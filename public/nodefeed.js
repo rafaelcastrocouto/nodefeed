@@ -10,7 +10,7 @@ $(window).load(function () {
     isSaved = (saved && saved.feedList && saved.feedList.length),
     reading = (location.hash === 'loading' || location.hash === 'feed'),
     $feed = $('.feed'),
-    $edit = $('.edit'),
+    $edit = $('.logo'),
     feedmode = 'welcome';
 
   var defaultList = [
@@ -40,7 +40,6 @@ $(window).load(function () {
     feedmode = 'feed';
     location.hash = feedmode;
     $feed.empty();
-    $edit.prop('disabled', false);
     data.sort(function (a, b) {
       var aDate = new Date(a.published),
         bDate = new Date(b.published);
@@ -53,7 +52,6 @@ $(window).load(function () {
     feedmode = 'loading';
     location.hash = feedmode;
     $feed.empty();
-    $edit.text('Edit').prop('disabled', true);
     $('<div>').addClass('article').text('Loading...').appendTo($feed);
     if (!feedList) {
       if (isSaved) {
@@ -85,7 +83,6 @@ $(window).load(function () {
     feedmode = 'edit';
     location.hash = feedmode;
     $feed.empty();
-    $edit.text('Done');
     var newList,
       container = $('<div>').addClass('article editfeed').appendTo($feed);
     $('<input>').attr('placeholder', 'Paste your feed link here').appendTo(container);
