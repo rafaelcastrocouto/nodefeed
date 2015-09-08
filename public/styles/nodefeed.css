@@ -13,5 +13,5 @@ noscript, .feed .article { background: #fff; }
 .feed .article .date { font-size: 90%; float: right; }
 .feed .article .title h1 { margin-top: 0; }
 .feed .article .meta span { margin-right: 1em; }
-.feed .article .content { padding: 1em; max-height: 70vh; overflow-y: auto; }
+.feed .article .content { padding: 1em; }
 .feed .article input { width: 60%; margin: 1em 0; }

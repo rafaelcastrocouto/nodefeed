@@ -14,11 +14,10 @@ $(window).load(function () {
     feedmode = 'welcome';
 
   var defaultList = [
-    'http://chrome.blogspot.com/atom.xml',
-    'http://blog.nodejs.org/feed',
-    'https://github.com/blog/all.atom',
-    'http://blog.jquery.com/feed',
-    'http://scriptogr.am/rafaelcastrocouto/feed'
+    'https://kimmo.suominen.com/stuff/dilbert-daily.xml',
+    'http://feeds.feedburner.com/umsabadoqualquer/olOP?format=xml',
+    'http://www.willtirando.com.br/rss/',
+    'http://www.barbadobardo.com/feed.xml'
   ];
 
   var addArticle = function (article) {
