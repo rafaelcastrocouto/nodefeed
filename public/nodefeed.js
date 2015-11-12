@@ -14,7 +14,7 @@ $(window).load(function () {
     feedmode = 'welcome';
 
   var defaultList = [
-    'http://explosm-feed.antonymale.co.uk/comics_feed'.
+    'http://explosm-feed.antonymale.co.uk/comics_feed',
     'https://kimmo.suominen.com/stuff/dilbert-daily.xml',
     'http://feeds.feedburner.com/umsabadoqualquer/olOP?format=xml',
     'http://www.willtirando.com.br/rss/',
