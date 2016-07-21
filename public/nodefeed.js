@@ -18,7 +18,8 @@ $(window).load(function () {
     'https://kimmo.suominen.com/stuff/dilbert-daily.xml',
     'http://feeds.feedburner.com/umsabadoqualquer/olOP?format=xml',
     'http://www.willtirando.com.br/rss/',
-    'http://www.smbc-comics.com/rss.php'
+    'http://www.smbc-comics.com/rss.php',
+    'http://xkcd.com/rss.xml'
   ];
 
   var addArticle = function (article) {
